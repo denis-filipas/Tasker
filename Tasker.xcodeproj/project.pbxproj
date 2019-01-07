@@ -15,6 +15,7 @@
 		41EA0B3D21E3672300DE32E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41EA0B3B21E3672300DE32E5 /* LaunchScreen.storyboard */; };
 		41EA0B4921E39C0200DE32E5 /* TaskCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41EA0B4821E39C0200DE32E5 /* TaskCellView.xib */; };
 		41EA0B4D21E39C9B00DE32E5 /* TaskCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EA0B4C21E39C9B00DE32E5 /* TaskCellView.swift */; };
+		41EA0B4F21E3C14D00DE32E5 /* TasksFetchedResultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EA0B4E21E3C14D00DE32E5 /* TasksFetchedResultsController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		41EA0B3E21E3672300DE32E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41EA0B4821E39C0200DE32E5 /* TaskCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskCellView.xib; sourceTree = "<group>"; };
 		41EA0B4C21E39C9B00DE32E5 /* TaskCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCellView.swift; sourceTree = "<group>"; };
+		41EA0B4E21E3C14D00DE32E5 /* TasksFetchedResultsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksFetchedResultsController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				41EA0B3121E3672100DE32E5 /* TaskListViewController.swift */,
+				41EA0B4E21E3C14D00DE32E5 /* TasksFetchedResultsController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 				41EA0B3821E3672100DE32E5 /* Tasker.xcdatamodeld in Sources */,
 				41EA0B3221E3672100DE32E5 /* TaskListViewController.swift in Sources */,
 				41EA0B3021E3672100DE32E5 /* AppDelegate.swift in Sources */,
+				41EA0B4F21E3C14D00DE32E5 /* TasksFetchedResultsController.swift in Sources */,
 				41EA0B4D21E39C9B00DE32E5 /* TaskCellView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
