@@ -16,20 +16,24 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5WL-OC-JzS">
-                    <rect key="frame" x="16" y="20" width="42" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="5WL-OC-JzS">
+                    <rect key="frame" x="8" y="333" width="359" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="5WL-OC-JzS" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="lpx-Mp-f3E"/>
+                <constraint firstItem="5WL-OC-JzS" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="mby-tu-52m"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="5WL-OC-JzS" secondAttribute="trailing" constant="8" id="rzL-db-GPa"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="titleLabel" destination="5WL-OC-JzS" id="B0y-J5-imV"/>
             </connections>
-            <point key="canvasLocation" x="22" y="-269"/>
+            <point key="canvasLocation" x="-132" y="-471"/>
         </view>
     </objects>
 </document>

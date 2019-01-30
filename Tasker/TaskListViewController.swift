@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 
 private let taskCellIdentifier = "TaskCellID"
+private let segueAddNewTask = "AddNewTask"
 
 class TaskListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate {
     
@@ -26,17 +27,26 @@ class TaskListViewController: UIViewController, UITableViewDelegate, UITableView
         
         fetchController = NSFetchedResultsController<Task>(
             fetchRequest: request,
-            managedObjectContext: AppDelegate.databaseContext,
+            managedObjectContext: AppDelegate.current.persistentContainer.viewContext,
             sectionNameKeyPath: nil,
             cacheName: nil)
         
-        taskTableView.delegate = self
-        taskTableView.dataSource = self
-        taskTableView.register(UINib(nibName: "TaskCellView", bundle: nil), forCellReuseIdentifier: taskCellIdentifier)
+        fetchController.delegate = self
         
+        taskTableView.dataSource = self
+        taskTableView.delegate = self
+        taskTableView.register(UINib(nibName: "TaskCellView", bundle: nil), forCellReuseIdentifier: taskCellIdentifier)
+        taskTableView.reloadData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        try? fetchController.performFetch()
     }
     
     // MARK: NSFetchedResultsControllerDelegate
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        taskTableView.reloadData()
+    }
     
 
     // MARK: UITableViewDataSource
@@ -52,6 +62,20 @@ class TaskListViewController: UIViewController, UITableViewDelegate, UITableView
         cell.initCell(with: cellData.title ?? "")
         
         return cell
+    }
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+
+        case segueAddNewTask:
+            if let addTaskController = segue.destination as? AddTaskViewController {
+                addTaskController.databaseContext = fetchController.managedObjectContext
+            }
+
+        default:
+            break
+        }
     }
 }
 
